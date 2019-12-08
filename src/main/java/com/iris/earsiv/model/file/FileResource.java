@@ -1,6 +1,8 @@
-package com.iris.earsiv.model;
+package com.iris.earsiv.model.file;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.iris.earsiv.model.Base;
+import com.iris.earsiv.model.ExtensionType;
 import com.iris.earsiv.model.auth.Account;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,7 +17,7 @@ import javax.validation.constraints.NotNull;
 @Document(collection = "FileResource")
 @TypeAlias("FileResource")
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class FileResource extends Base{
+public class FileResource extends Base {
 
     // Reserved for file name
     @Getter
@@ -35,6 +37,11 @@ public class FileResource extends Base{
     @Setter
     private FileResourceType resourceType;
 
+    @Getter
+    @Setter
+    @NotNull
+    private FileCategory fileCategory;
+
     // Base64 file content
     @Getter
     @Setter
@@ -42,8 +49,7 @@ public class FileResource extends Base{
 
     @Getter
     @Setter
-    @NotNull
-    private FilePrivacy filePrivacy = FilePrivacy.PRIVATE;
+    private boolean isPrivate = true;
 
     @Getter
     @Setter

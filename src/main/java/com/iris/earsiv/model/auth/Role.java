@@ -15,8 +15,8 @@ import java.util.Set;
  * <p>
  * ROLE_ADMIN: Süper admin
  * ROLE_SUBEADMIN: Sube Admini, sube ile alakalı işleri ve firmaları inceleyebilecek
- * ROLE_SUBEPERSONAL: Firmaya çalışan ekleyebilecek
- * ROLE_FIRMAPERSONAL: Firmaya dosya ekleyebilecek
+ * ROLE_SUBEPERSONAL: Firmaya dosya ekleyebilecek, firma oluşturabilecek
+ * ROLE_FIRMAPERSONAL: Dosyaları görüntüleyebilecek
  */
 
 @Document(collection = "Role")
@@ -59,7 +59,7 @@ public class Role extends Base implements GrantedAuthority {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj != null && obj instanceof Role) {
+        if (obj instanceof Role) {
             return getAuthority().equals(((Role) obj).getAuthority());
         } else {
             return false;

@@ -28,11 +28,6 @@ public class Sube extends Base{
     @Getter
     @Setter
     @DBRef
-    private List<FileResource> files;
-
-    @Getter
-    @Setter
-    @DBRef
     private List<Firma> firmalar;
 
     @Getter

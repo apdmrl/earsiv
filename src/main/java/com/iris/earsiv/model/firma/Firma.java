@@ -1,10 +1,8 @@
 package com.iris.earsiv.model.firma;
 
-import com.iris.earsiv.model.Address;
 import com.iris.earsiv.model.Base;
-import com.iris.earsiv.model.FileResource;
+import com.iris.earsiv.model.file.FileResource;
 import com.iris.earsiv.model.Status;
-import com.iris.earsiv.model.auth.Account;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
