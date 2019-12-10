@@ -55,7 +55,7 @@ public class FirmaService {
     public List<Account> getAccounts(Account account,Firma firma) {
         if (account.getRole().equals(Role.sube_admin()) || account.getRole().equals(Role.sube_personal())) {
                 logger.info("All accounts from " + firma.getProfile().getName() + " are listed by sube personel: " + account.getProfile().getFullName());
-                return accountService.findByFirma(firma);
+//                return accountService.findByFirma(firma);
         }
         logger.info("Only sube_admin roles can show accounts");
         return null;

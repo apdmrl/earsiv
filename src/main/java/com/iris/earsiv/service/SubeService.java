@@ -52,7 +52,7 @@ public class SubeService {
             Sube sube = get(account.getSubeId());
             if (sube != null) {
                 logger.info("All accounts from " + sube.getName() + " are listed by sube admin: " + account.getProfile().getFullName());
-                return accountService.findBySube(sube);
+//                return accountService.findBySube(sube);
             } else {
                 logger.error("Sube not found. Requested subeID:" + account.getSubeId());
                 return null;
@@ -179,7 +179,7 @@ public class SubeService {
         if (sube != null) {
 
             List<Base> related = new ArrayList<>();
-            related.addAll(accountService.findBySube(sube));
+//            related.addAll(accountService.findBySube(sube));
 
             //Firmanın dosyaları da silinecek
         }

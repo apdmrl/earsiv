@@ -1,6 +1,8 @@
 package com.iris.earsiv.model.firma;
 
 import com.iris.earsiv.model.Base;
+import com.iris.earsiv.model.auth.Account;
+import com.iris.earsiv.model.file.FileCategory;
 import com.iris.earsiv.model.file.FileResource;
 import com.iris.earsiv.model.Status;
 import lombok.Getter;
@@ -30,6 +32,20 @@ public class Firma extends Base {
     @Setter
     @DBRef
     private List<FileResource> files;
+
+    @Getter
+    @Setter
+    private List<FileCategory> fileCategories;
+
+    @Getter
+    @Setter
+    @DBRef
+    private Account firmaYetkilisi;
+
+    @Getter
+    @Setter
+    @DBRef
+    private List<Account> isgUzmanlari;
 
     @Getter
     @Setter

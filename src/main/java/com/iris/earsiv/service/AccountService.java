@@ -92,13 +92,13 @@ public class AccountService implements UserDetailsService {
         }
     }
 
-    public List<Account> findBySube(Sube sube) {
-        return accountRepository.findBySube(sube);
-    }
-
-    public List<Account> findByFirma(Firma firma) {
-        return accountRepository.findByFirma(firma);
-    }
+//    public List<Account> findBySube(Sube sube) {
+//        return accountRepository.findBySube(sube);
+//    }
+//
+//    public List<Account> findByFirma(Firma firma) {
+//        return accountRepository.findByFirma(firma);
+//    }
 
     public Account get(String id) {
         return accountRepository.findById(id).orElse(null);
